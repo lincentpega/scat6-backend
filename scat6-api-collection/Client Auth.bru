@@ -1,0 +1,21 @@
+meta {
+  name: Client Auth
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8788/realms/scat6-app/protocol/openid-connect/token
+  body: formUrlEncoded
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/x-www-form-urlencoded
+}
+
+body:form-urlencoded {
+  grant_type: client_credentials
+  client_id: test-client
+  client_secret: 7OPFCU3Sb8T6WQUzxE4pHFsKfDIEL75H
+}
