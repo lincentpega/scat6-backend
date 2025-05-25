@@ -1,5 +1,6 @@
 package com.lincentpega.scat6backend.config;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -15,6 +16,7 @@ import java.util.Set;
 
 @Configuration
 @EnableMethodSecurity
+@RequiredArgsConstructor
 public class SecurityConfiguration {
 
     @Bean
@@ -25,6 +27,7 @@ public class SecurityConfiguration {
                 .requestMatchers("/api/**").authenticated()
                 .anyRequest().permitAll())
             .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(keycloakConverter())));
+            // .addFilterAfter(authenticationLoggingFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 

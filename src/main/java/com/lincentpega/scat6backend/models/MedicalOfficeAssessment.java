@@ -1,15 +1,20 @@
 package com.lincentpega.scat6backend.models;
 
-import lombok.AllArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
+
 @Getter
 @Setter
-@AllArgsConstructor
+@Document(collection = "medical_office_assessments")
 public class MedicalOfficeAssessment {
+    @Id
+    private String id;
+    private String sportsmanId;
     private SportsmanInfo sportsmanInfo;
     private Symptoms symptoms;
     private CognitiveFunctions cognitiveFunctions;

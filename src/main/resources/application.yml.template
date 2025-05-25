@@ -1,0 +1,10 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak.address:8080/realms/scat6-app
+  data:
+    mongodb:
+      uri: mongodb://user:pass@mongo.address:27017
+      database: scat6-db

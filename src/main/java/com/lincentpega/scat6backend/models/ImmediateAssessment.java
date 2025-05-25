@@ -11,10 +11,10 @@ import lombok.Setter;
 @Document(collection = "immediate_assessments")
 public class ImmediateAssessment {
     @Id
-    private Long id;
+    private String id;
+    private String sportsmanId;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
-    private Long sportsmanId;
     private ObservableSigns observableSigns;
     private NeckSpineAssessment neckSpineAssessment;
     private GlasgowScale glasgowScale;

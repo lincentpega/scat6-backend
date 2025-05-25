@@ -1,0 +1,30 @@
+meta {
+  name: Create Sportsman
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/sportsmans
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "fullName": "Igor Krasnyukov",
+    "birthDate": "2002-07-18",
+    "passport": "11 2222222",
+    "gender": "MALE",
+    "leadingHand": "RIGHT",
+    "inspectionDate": "2025-05-24",
+    "injuryDate": "2025-05-24",
+    "injuryTime": "16:30",
+    "otherInfo": "сосет пенис",
+    "sportType": "футбол",
+    "yearOfStudy": 2,
+    "completedYears": 1,
+    "nativeLanguage": "русский",
+    "spokenLanguage": "русский"
+  }
+}

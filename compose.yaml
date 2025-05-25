@@ -7,6 +7,8 @@ services:
       - 'MONGO_INITDB_ROOT_USERNAME=root'
     ports:
       - '27017:27017'
+    volumes:
+      - mongo_data:/data/db
     healthcheck:
       test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
       interval: 30s
@@ -32,3 +34,4 @@ services:
 
 volumes:
   keycloak_data:
+  mongo_data:

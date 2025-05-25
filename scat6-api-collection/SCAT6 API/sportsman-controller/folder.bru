@@ -1,0 +1,23 @@
+meta {
+  name: sportsman-controller
+  seq: 1
+}
+
+auth {
+  mode: oauth2
+}
+
+auth:oauth2 {
+  grant_type: client_credentials
+  access_token_url: http://localhost:8788/realms/scat6-app/protocol/openid-connect/token
+  refresh_token_url: http://localhost:8788/realms/scat6-app/protocol/openid-connect/token
+  client_id: test-client
+  client_secret: 7OPFCU3Sb8T6WQUzxE4pHFsKfDIEL75H
+  scope: 
+  credentials_placement: body
+  credentials_id: credentials
+  token_placement: header
+  token_header_prefix: Bearer
+  auto_fetch_token: false
+  auto_refresh_token: true
+}

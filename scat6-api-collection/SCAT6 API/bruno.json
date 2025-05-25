@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "SCAT6 API",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
